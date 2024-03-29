@@ -37,13 +37,14 @@ custom_css = """
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # Create the sidebar menu
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Project Introduction", 'Project Insight', "New RFM Analysis"]
-                           , icons=['house', 'book', 'upload']
-                           , menu_icon="cast"
-                           , default_index=0
-                           ,)
-
+# with st.sidebar:
+#     selected = option_menu("Main Menu", ["Project Introduction", 'Project Insight', "New RFM Analysis"]
+#                            , icons=['house', 'book', 'upload']
+#                            , menu_icon="cast"
+#                            , default_index=0
+#                            ,)
+menu = ["Project Introduction", "Project Insight", "New RFM Analysis"]
+selected = st.sidebar.selectbox('Menu', menu)
 st.subheader(f":blue[{selected}]")
 
 

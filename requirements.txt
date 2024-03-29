@@ -1,0 +1,12 @@
+streamlit
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+sklearn
+squarify
+pickle
+datetime
+option_menu
+streamlit_option_menu

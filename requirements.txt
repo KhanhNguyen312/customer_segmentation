@@ -5,6 +5,3 @@ matplotlib
 seaborn
 scikit-learn
 squarify
-datetime
-option_menu
-streamlit_option_menu

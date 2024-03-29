@@ -1,0 +1,5 @@
+,Cluster,RecencyMean,FrequencyMean,MonetaryMean,Count,Percent,ClusterName
+3,Cluster 3,22.0,6.0,3199.0,2018,47.39,Star Customer
+0,Cluster 0,86.0,3.0,1323.0,1021,23.98,Regular Customer
+2,Cluster 2,177.0,2.0,653.0,654,15.36,Need Attention Customer
+1,Cluster 1,287.0,1.0,549.0,565,13.27,Lost Customer

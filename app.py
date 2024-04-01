@@ -387,9 +387,9 @@ if selected == "New RFM Analysis":
             st.dataframe(df.head(7))
             st.markdown(sep_line, unsafe_allow_html=True)
 
+            df.drop_duplicates(inplace=True)
             df.dropna(how='all', inplace=True)
             df.dropna(subset=['CustomerID'], inplace=True)
-            df =df.dropna(subset=['CustomerID'], inplace=True)
             quantity_filter = df['Quantity'] > 0
             unit_price_filter = df['UnitPrice'] > 0
             df = df[quantity_filter & unit_price_filter]

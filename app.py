@@ -387,8 +387,9 @@ if selected == "New RFM Analysis":
             st.dataframe(df.head(7))
             st.markdown(sep_line, unsafe_allow_html=True)
 
-            df.drop_duplicates(inplace=True)
-            df.dropna(subset=['CustomerID'], inplace=True)
+            df =df.drop_duplicates(inplace=True)
+            df = df.dropna(how='all')
+            df =df.dropna(subset=['CustomerID'], inplace=True)
             quantity_filter = df['Quantity'] > 0
             unit_price_filter = df['UnitPrice'] > 0
             df = df[quantity_filter & unit_price_filter]
@@ -396,7 +397,7 @@ if selected == "New RFM Analysis":
             df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], errors='coerce')
             df['SalesRevenue'] = df['UnitPrice'] * df['Quantity']
 
-            max_date = df['InvoiceDate'].max().date()
+            max_date = df['InvoiceDate'].dropna().max().date()
             recency = lambda x: (max_date - x.max().date()).days
             frequency = lambda x: len(x.unique())
             monetary = lambda x: round(sum(x), 2)

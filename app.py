@@ -392,7 +392,7 @@ if selected == "New RFM Analysis":
             df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], errors='coerce')
             df['SalesRevenue'] = df['UnitPrice'] * df['Quantity']
 
-             try:
+            try:
                 max_date = df['InvoiceDate'].max().date()
                 recency = lambda x: (max_date - x.max().date()).days
                 frequency = lambda x: len(x.unique())

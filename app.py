@@ -1,10 +1,6 @@
 import streamlit as st
-#from streamlit_option_menu import option_menu
 import matplotlib.pyplot as plt
 import pandas as pd
-import numpy as np
-from sklearn.cluster import KMeans
-from sklearn.preprocessing import MinMaxScaler
 import squarify
 import pickle
 from datetime import datetime
